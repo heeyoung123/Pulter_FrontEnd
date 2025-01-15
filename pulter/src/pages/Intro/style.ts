@@ -43,3 +43,20 @@ export const SubTitle = styled.div`
   letter-spacing: -0.00125em;
   color: ${(props) => props.theme.colors.black};
 `;
+export const StartText = styled.div`
+  /* Child objects in a smart layout frame */
+  position: static;
+  left: 1.5rem;
+  top: 17.5rem;
+  width: 20.44rem;
+  height: 1.56rem;
+  /* Smart layout */
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem;
+  align-self: stretch;
+  z-index: 1;
+`;

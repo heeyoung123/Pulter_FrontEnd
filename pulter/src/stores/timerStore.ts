@@ -1,3 +1,4 @@
+// store/timerStore.ts
 import { create } from "zustand";
 
 interface TimerState {
@@ -5,21 +6,22 @@ interface TimerState {
   startTimer: (onComplete: () => void) => void;
   resetTimer: () => void;
 }
+
 export const useTimerStore = create<TimerState>((set) => ({
   count: 3,
   startTimer: (onComplete) => {
-    let timer: NodeJS.Timeout | null = null;
-    const countdown = () => {
-      set((state) => {
-        if (state.count === 1) {
-          clearTimeout(timer!);
-          onComplete();
-          return { count: 3 };
-        }
-        return { count: state.count - 1 };
-      });
+    const countdown = (currentCount: number) => {
+      if (currentCount === 0) {
+        onComplete();
+        set({ count: 3 });
+        return;
+      }
+
+      set({ count: currentCount });
+      setTimeout(() => countdown(currentCount - 1), 1000);
     };
-    timer = setInterval(countdown, 1000);
+
+    countdown(3);
   },
   resetTimer: () => set({ count: 3 }),
 }));
