@@ -1,5 +1,5 @@
 import Plant from "../../assets/intro/Plant.svg?react";
-import { IntroContainer, Title } from "./style";
+import { IntroContainer, Title, SubTitle } from "./style";
 import { TEXT } from "@/constants/text";
 
 const INTRO: React.FC = () => {
@@ -7,7 +7,9 @@ const INTRO: React.FC = () => {
     <>
       <Plant />
       <IntroContainer>
-        <Title>{TEXT.title}</Title>
+        <Title>
+          {TEXT.title} <SubTitle>{TEXT.sub_title}</SubTitle>
+        </Title>
       </IntroContainer>
     </>
   );

@@ -6,7 +6,7 @@ export const IntroContainer = styled.div`
   top: 28rem;
   width: 23.44rem;
   height: 22.75rem;
-  /* Smart layout */
+
   display: flex;
   flex-direction: column;
   padding: 2.25rem 1.5rem 1.5rem 1.5rem;
@@ -20,7 +20,26 @@ export const Title = styled.div`
   font-weight: normal;
   line-height: 140%;
   letter-spacing: -0.00125em;
-  font-variation-settings: "opsz" auto;
-  /* Dark */
-  color: #24243f;
+
+  color: ${(props) => props.theme.colors.black};
+  position: static;
+  left: 1.5rem;
+  top: 2.25rem;
+  width: 20.44rem;
+  height: 5.25rem;
+
+  display: flex;
+  flex-direction: column;
+  padding: 0rem;
+  gap: 1.0625rem;
+  align-self: stretch;
+  z-index: 0;
+`;
+export const SubTitle = styled.div`
+  font-family: Work Sans;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 140%;
+  letter-spacing: -0.00125em;
+  color: ${(props) => props.theme.colors.black};
 `;
