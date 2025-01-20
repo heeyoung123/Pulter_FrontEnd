@@ -12,6 +12,7 @@ const colors = {
   gray: "#5A5A75",
   blue: "#95D6FF",
   white: "#FFFFFF",
+  border: "#E2E2E2",
 };
 export const lightTheme = {
   color: "#FFFFFF",
