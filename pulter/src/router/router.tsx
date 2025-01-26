@@ -5,7 +5,7 @@ import { lazy, Suspense } from "react";
 import App from "../App";
 
 const INTRO_PAGE = lazy(() => import("@/pages/Intro/Intro"));
-const REGISTER_PAGE = lazy(() => import("@/pages/Register/Register"));
+const REGISTER_PAGE = lazy(() => import("@/pages/Register/RegisterStep"));
 const router = createBrowserRouter([
   {
     path: "/",

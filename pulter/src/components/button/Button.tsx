@@ -1,6 +1,5 @@
 import React from "react";
-import { ButtonContainer } from "./Button.style";
-
+import * as S from "../button/Button.style";
 interface ButtonProps {
   onClick?: () => void;
   children: React.ReactNode;
@@ -9,7 +8,7 @@ interface ButtonProps {
 export const Button: React.FC<ButtonProps> = ({ onClick, children }) => {
   return (
     <>
-      <ButtonContainer onClick={onClick}>{children}</ButtonContainer>
+      <S.ButtonContainer onClick={onClick}>{children}</S.ButtonContainer>
     </>
   );
 };
