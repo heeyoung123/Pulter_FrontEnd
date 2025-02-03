@@ -12,6 +12,7 @@ const RegisterStep: React.FC = () => {
         <REGISTER
           text={TEXT.plantName_text}
           placeholder={TEXT.plantName_placeholder}
+          buttonText={TEXT.next_text}
           onNext={(plantName) => history.push("plantDate", { plantName })}
         />
       )}
@@ -19,6 +20,7 @@ const RegisterStep: React.FC = () => {
         <REGISTER
           text={TEXT.plantDate_text}
           placeholder={TEXT.plantDate_placeholder}
+          buttonText={TEXT.next_text}
           onNext={(plantDate) => history.push("plantType", { plantDate })}
         />
       )}
@@ -26,6 +28,7 @@ const RegisterStep: React.FC = () => {
         <REGISTER
           text={TEXT.plantType_text}
           placeholder={TEXT.plantType_placeholder}
+          buttonText={TEXT.next_text}
           onNext={(plantType) => history.push("plantLocation", { plantType })}
         />
       )}
@@ -33,6 +36,7 @@ const RegisterStep: React.FC = () => {
         <REGISTER
           text={TEXT.plantLocation_text}
           placeholder={TEXT.plantLocation_placeholder}
+          buttonText={TEXT.end_text}
           onNext={(plantLocation) =>
             console.log("등록 완료:", { ...context, plantLocation })
           }

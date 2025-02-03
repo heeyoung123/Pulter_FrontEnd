@@ -8,8 +8,14 @@ type RegisterProps = {
   text: string;
   placeholder: string;
   onNext: (value: string) => void;
+  buttonText: string;
 };
-const REGISTER: React.FC<RegisterProps> = ({ text, placeholder, onNext }) => {
+const REGISTER: React.FC<RegisterProps> = ({
+  text,
+  placeholder,
+  onNext,
+  buttonText,
+}) => {
   const [value, setValue] = useState("");
   return (
     <CommonContainer>
@@ -19,7 +25,7 @@ const REGISTER: React.FC<RegisterProps> = ({ text, placeholder, onNext }) => {
         onChange={(e) => setValue(e.target.value)}
         placeholder={placeholder}
       />
-      <Button onClick={() => onNext(value)}>다음</Button>
+      <Button onClick={() => onNext(value)}>{buttonText}</Button>
     </CommonContainer>
   );
 };

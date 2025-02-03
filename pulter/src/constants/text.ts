@@ -11,4 +11,7 @@ export const TEXT = {
   plantDate_text: "분양 날짜를 알려주세요",
   plantType_text: "식물 품종을 알려주세요",
   plantLocation_text: "키우는 위치를 알려주세요",
+
+  next_text: "다음",
+  end_text: "확인",
 };
