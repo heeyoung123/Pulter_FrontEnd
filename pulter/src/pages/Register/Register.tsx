@@ -30,33 +30,3 @@ const REGISTER: React.FC<RegisterProps> = ({
   );
 };
 export default REGISTER;
-
-// import React, { useState } from "react";
-// import { TextContainer, InputContainer, Button } from "@/shared/styles";
-
-// type StepFormProps = {
-//   text: string; // 단계별로 보여줄 텍스트
-//   placeholder: string; // 입력 필드의 placeholder
-//   onNext: (value: string) => void; // 다음 단계로 이동하는 함수
-// };
-
-// const StepForm: React.FC<StepFormProps> = ({ text, placeholder, onNext }) => {
-//   const [value, setValue] = useState("");
-
-//   return (
-//     <div>
-//       <TextContainer>{text}</TextContainer>
-//       <InputContainer>
-//         <input
-//           type="text"
-//           value={value}
-//           onChange={(e) => setValue(e.target.value)}
-//           placeholder={placeholder}
-//         />
-//       </InputContainer>
-//       <Button onClick={() => onNext(value)}>다음</Button>
-//     </div>
-//   );
-// };
-
-// export default StepForm;

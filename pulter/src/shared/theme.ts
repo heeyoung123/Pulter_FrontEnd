@@ -23,7 +23,8 @@ const fontSize = {
   s: "0.815rem",
   m: "1rem",
   lg: "1.25rem",
-  xl: "1.94rem",
+  xl: "1.75rem",
+  xxl: "1.94rem",
 };
 const fontWeight = {
   regular: "400",
@@ -57,6 +58,5 @@ const theme = {
 };
 
 export default theme;
-
 /** 타입 재정의를 위함 ( "styled-components" 변수 타입 추론을 위함( 자동완성 ) ) */
 export type Theme = typeof theme;
